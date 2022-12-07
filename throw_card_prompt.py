@@ -7,4 +7,3 @@ def throw_card_prompt():
     return prompt
 
 
-throw_card_prompt()
