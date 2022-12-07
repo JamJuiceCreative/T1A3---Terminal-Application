@@ -16,8 +16,8 @@ def player_turn():
     single_player = ""
     survivor1 = []
     while single_player != "King":
-        
         system('clear')
+        print("Survivor 1")
         single_player = throw_card_prompt()
         if single_player in card_values:
             survivor1.append(single_player)  
@@ -31,7 +31,7 @@ def player_turn():
     print("You have chosen to skip the challenge")
 
 
-
+player_turn()
         
         
    
