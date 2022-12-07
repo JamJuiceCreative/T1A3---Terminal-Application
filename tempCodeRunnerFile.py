@@ -1,1 +1,1 @@
-print('Ace' in card_values.values())
+from os import system

@@ -8,6 +8,8 @@ def test_card_values():
         8: 750,
         "king": 1000
     }
+    
     assert("Ace" not in card_values.items())
 
     assert(2 in card_values)
+
