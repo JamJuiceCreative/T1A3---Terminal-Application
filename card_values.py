@@ -1,3 +1,9 @@
-card_values = {"Ace": 1, 2: 2, 3: 3, 5: 4, 8: 6, "King": 7}
+card_values = {
+    "Ace": 50, 
+    2: 100, 
+    3: 250, 
+    5: 500, 
+    8: 750, 
+    "King": 1000
+}
 
-print (card_values[5])

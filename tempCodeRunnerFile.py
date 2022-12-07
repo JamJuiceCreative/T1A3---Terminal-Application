@@ -1,1 +1,0 @@
-Zombie Apocalypse Planning Poker
