@@ -15,20 +15,20 @@ def player_turn():
     
     single_player = ""
     player_threw = []
-    while single_player != "King":
+    while single_player != "q":
         
         single_player = throw_card_prompt()
         if single_player in card_values:
             player_threw.append(single_player)
             print(f"You threw {player_threw}")
-            break
+            
         elif single_player == "King":
             continue
         else: 
             print("That's not a valid option!")
         input("press Enter to continue...")
         system('clear')
-    print("You have chosen to skip the challenge")
+    
 
 
 
