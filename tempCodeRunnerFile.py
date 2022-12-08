@@ -1,1 +1,1 @@
-player_turn
+print(number_of_players())
