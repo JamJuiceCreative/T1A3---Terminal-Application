@@ -22,7 +22,7 @@ def single_player_mode():
     system('clear')
     instructions()
     list_of_inputs = []
-    list_of_inputs.append(players_threw)
+    
 
     for index in range(len(number_of_players())):
         if index == 0:
@@ -30,6 +30,7 @@ def single_player_mode():
             print (number_of_players()[0])
             print (number_of_challenges()[0])
             player_turn()
+            input(list_of_inputs[0])
             
         elif index == 1:
             system('clear')
