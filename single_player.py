@@ -3,6 +3,7 @@ from players import Player, number_of_players
 from player_turn import player_turn, players_threw
 from list_of_challenges import number_of_challenges
 from instructions import instructions
+
 # here is where the single player mode will run
 
 # list_of_inputs = []
@@ -18,13 +19,20 @@ from instructions import instructions
 
 # do_cards_match()
 
+
+count = 0
+
 def single_player_mode():
+    
     system('clear')
     instructions()
     list_of_inputs = []
     
-
+    
+       
+    
     for index in range(len(number_of_players())+1):
+        
         if index == 0:
             print()
             print (number_of_players()[0])
@@ -51,13 +59,18 @@ def single_player_mode():
             list_of_inputs.append(players_threw[2])
             input((list_of_inputs[2]))
         elif index >= 3:
-            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2] :
-                print ("holy mackeral")
+            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2]:
+                list_of_inputs.clear()
+                input("fuck me")
+                
+                single_player_mode()
+                
         else:
             print(list_of_inputs)
-            
+
 single_player_mode()
-    
+# print(count)
+   
 
 # single_player_mode()
 # print(len(number_of_players()))
