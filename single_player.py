@@ -4,10 +4,17 @@ from player_turn import player_turn, player_threw
 from list_of_challenges import number_of_challenges
 # here is where the single player mode will run
 
-list_of_inputs = [player_threw[0]]
-survivor1 = []
-survivor2 = []
-survivor3 = []
+list_of_inputs = [2, 2, 2]
+survivor1 = [list_of_inputs[0]]
+survivor2 = [list_of_inputs[1]]
+survivor3 = [list_of_inputs[2]]
+
+def do_cards_match():
+    while survivor1 != survivor2 and survivor3:
+        print ("this is a test")
+print ("those bad boys match")
+
+do_cards_match()
 
 def single_player_mode():
     system('clear')  
@@ -34,4 +41,4 @@ def single_player_mode():
 
 # single_player_mode()
 # print(len(number_of_players()))
-single_player_mode()
+# single_player_mode()
