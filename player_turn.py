@@ -15,7 +15,7 @@ def player_turn():
     
     single_player = ""
     player_threw = []
-    while single_player != "q":
+    while single_player != "King":
         
         single_player = throw_card_prompt()
         if single_player in card_values:
@@ -23,14 +23,12 @@ def player_turn():
             print(f"You threw {player_threw}")
             
         elif single_player == "King":
-            continue
+            break
         else: 
             print("That's not a valid option!")
-        input("press Enter to continue...")
+        
         system('clear')
-    
-
-
+    input("press Enter to continue...")
 
 
 
