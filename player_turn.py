@@ -22,9 +22,8 @@ def player_turn():
         single_player = throw_card_prompt()
         if single_player == "King":
             player_threw.append(single_player)
-            
             input("You have voted to skip the challenge. Press Enter to Continue...")
-             
+            continue
         elif single_player in card_values:
             player_threw.append(single_player)
             input((f"You threw {player_threw}. Press Enter to Continue..."))

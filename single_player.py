@@ -24,14 +24,14 @@ def single_player_mode():
     list_of_inputs = []
     
 
-    for index in range(len(number_of_players())):
+    for index in range(len(number_of_players())+1):
         if index == 0:
             print()
             print (number_of_players()[0])
             print (number_of_challenges()[0])
             player_turn()
-            input(list_of_inputs[0])
-            
+            list_of_inputs.append(players_threw[0])
+            input((list_of_inputs[0]))
         elif index == 1:
             system('clear')
             instructions()
@@ -39,6 +39,8 @@ def single_player_mode():
             print (number_of_players()[1])
             print (number_of_challenges()[0])
             player_turn()
+            list_of_inputs.append(players_threw[1])
+            input((list_of_inputs[1]))
         elif index == 2:
             system('clear')
             instructions()
@@ -46,10 +48,13 @@ def single_player_mode():
             print (number_of_players()[2])
             print (number_of_challenges()[0])
             player_turn()
-        elif index == 3:
-            print ("This shouldn't work")
+            list_of_inputs.append(players_threw[2])
+            input((list_of_inputs[2]))
+        elif index >= 3:
+            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2] :
+                print ("holy mackeral")
         else:
-            print("butts are scary")
+            print(list_of_inputs)
             
 single_player_mode()
     
