@@ -1,10 +1,10 @@
 from os import system
 from players import Player, number_of_players
-from player_turn import player_turn
+from player_turn import player_turn, player_threw
 from list_of_challenges import number_of_challenges
 # here is where the single player mode will run
 
-list_of_inputs = []
+list_of_inputs = [player_threw[0]]
 survivor1 = []
 survivor2 = []
 survivor3 = []
@@ -27,7 +27,7 @@ def single_player_mode():
         elif index == 3:
             print ("This shouldn't work")
         else:
-            print("buttholes")
+            print(list_of_inputs)
             
 
     

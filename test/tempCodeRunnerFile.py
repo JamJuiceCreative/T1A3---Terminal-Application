@@ -1,0 +1,1 @@
+assert print(list_of_inputs)
