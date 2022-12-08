@@ -9,4 +9,3 @@ def number_of_players():
    
     return (player_list)
 
-print(number_of_players())

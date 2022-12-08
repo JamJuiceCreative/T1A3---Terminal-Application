@@ -1,6 +1,6 @@
 from os import system
-from list_of_challenges import challenge1, challenge2, challenge3
 from throw_card_prompt import throw_card_prompt
+
 
 def player_turn():
 
@@ -19,7 +19,6 @@ def player_turn():
         single_player = throw_card_prompt()
         if single_player in card_values:
             survivor1.append(single_player)  
-            print(survivor1)
         elif single_player == "King":
             continue
         else: 

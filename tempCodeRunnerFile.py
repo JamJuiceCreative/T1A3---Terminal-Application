@@ -1,1 +1,1 @@
-print(number_of_players())
+print (number_of_challenges()[0])
