@@ -1,7 +1,7 @@
-from os import system
+
 from throw_card_prompt import throw_card_prompt
 
-player_threw = []
+players_threw = []
 def player_turn():
 
     
@@ -17,7 +17,7 @@ def player_turn():
     single_player = ""
     
     while single_player != "King":
-        
+        player_threw = []
         single_player = throw_card_prompt()
         if single_player == "King":
             player_threw.append(single_player)
@@ -25,10 +25,10 @@ def player_turn():
             break    
         if single_player in card_values:
             player_threw.append(single_player)
-        print(f"You threw {player_threw}")
+        input((f"You threw {player_threw}. Press Enter to Continue..."))
         break
     
- 
+# player_turn()
         
     #     elif single_player == "King":
     #         continue

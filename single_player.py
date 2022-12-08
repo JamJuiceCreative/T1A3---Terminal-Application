@@ -1,6 +1,6 @@
 from os import system
 from players import Player, number_of_players
-from player_turn import player_turn, player_threw
+from player_turn import player_turn, players_threw
 from list_of_challenges import number_of_challenges
 from instructions import instructions
 # here is where the single player mode will run
@@ -22,7 +22,7 @@ def single_player_mode():
     system('clear')
     instructions()
     list_of_inputs = []
-    list_of_inputs.append(player_threw)
+    list_of_inputs.append(players_threw)
 
     for index in range(len(number_of_players())):
         if index == 0:
@@ -30,27 +30,25 @@ def single_player_mode():
             print (number_of_players()[0])
             print (number_of_challenges()[0])
             player_turn()
-                # if player_turn == "King"
-                #     index += index 
-            index += index
+            
         elif index == 1:
             system('clear')
             instructions()
             print()
             print (number_of_players()[1])
-            
+            print (number_of_challenges()[0])
             player_turn()
         elif index == 2:
             system('clear')
             instructions()
             print()
             print (number_of_players()[2])
-            
+            print (number_of_challenges()[0])
             player_turn()
         elif index == 3:
             print ("This shouldn't work")
         else:
-            print(list_of_inputs)
+            print("butts are scary")
             
 single_player_mode()
     
