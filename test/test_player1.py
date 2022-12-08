@@ -6,13 +6,3 @@ from os import system
 
 
 
-def player1():
-    print("Survivor 1")
-    
-player1 = ""
-
-while player != "q":
-    system('clear')
-    player = player1
-
-

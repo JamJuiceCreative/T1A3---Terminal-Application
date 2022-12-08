@@ -1,1 +1,1 @@
-system('clear')
+player_turn
