@@ -28,7 +28,7 @@ def player_turn():
         print(f"You threw {player_threw}")
         break
     
-  
+ 
         
     #     elif single_player == "King":
     #         continue
