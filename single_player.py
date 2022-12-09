@@ -22,19 +22,21 @@ from instructions import instructions
 
 
 sum_of_inputs = []
-
+count = 0
 def single_player_mode():
-    
+    global count
+    count +1
     system('clear')
     instructions()
     list_of_inputs = []
-    round = len(sum_of_inputs)
+    
 
     for index in range(len(number_of_players())+1):
         
+        
         if index == 0:
             print (number_of_players()[0])
-            print(f"round:{round}")
+            print(f"Round:{count+1}")
             print (number_of_challenges()[0])
             player_turn()
             list_of_inputs.append(players_threw[0])
@@ -44,6 +46,7 @@ def single_player_mode():
             instructions()
             print()
             print (number_of_players()[1])
+            print(f"Round:{count+1}")
             print (number_of_challenges()[0])
             player_turn()
             list_of_inputs.append(players_threw[1])
@@ -54,6 +57,7 @@ def single_player_mode():
             instructions()
             print()
             print (number_of_players()[2])
+            print(f"Round:{count+1}")
             print (number_of_challenges()[0])
             player_turn()
             list_of_inputs.append(players_threw[2])
@@ -68,9 +72,14 @@ def single_player_mode():
                 input(list_of_inputs)
                 players_through_clear()
                 single_player_mode()
-                
+            elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
+                sum_of_inputs.append(list_of_inputs)
+                players_through_clear()
+                count +=1
+                single_player_mode()
         else:
-            input(list_of_inputs)
+            single_player_mode()
+       
 
 single_player_mode()
 
