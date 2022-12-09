@@ -22,16 +22,14 @@ from instructions import instructions
 
 
 sum_of_inputs = []
-round = len(sum_of_inputs)
+
 def single_player_mode():
     
     system('clear')
     instructions()
     list_of_inputs = []
-    
-    
-       
-    
+    round = len(sum_of_inputs)
+
     for index in range(len(number_of_players())+1):
         
         if index == 0:
