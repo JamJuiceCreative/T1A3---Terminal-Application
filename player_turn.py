@@ -32,10 +32,13 @@ def player_turn():
             input("Not a valid selection. Press Enter to Continue")
     players_threw.append(player_threw[0])
 
+def players_through_clear():
+    players_threw.clear()
 
 
-# player_turn()
-# print(players_threw)        
+
+
+       
     #     elif single_player == "King":
     #         continue
     #     else: 

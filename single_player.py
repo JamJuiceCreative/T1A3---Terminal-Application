@@ -1,6 +1,6 @@
 from os import system
 from players import Player, number_of_players
-from player_turn import player_turn, players_threw
+from player_turn import player_turn, players_threw, players_through_clear
 from list_of_challenges import number_of_challenges
 from instructions import instructions
 
@@ -19,9 +19,9 @@ from instructions import instructions
 
 # do_cards_match()
 
-sum_of_inputs = []
-counter = 0
 
+counter = 0
+sum_of_inputs = []
 def single_player_mode():
     
     system('clear')
@@ -34,7 +34,6 @@ def single_player_mode():
     for index in range(len(number_of_players())+1):
         
         if index == 0:
-            print()
             print (number_of_players()[0])
             print (number_of_challenges()[0])
             player_turn()
@@ -50,6 +49,7 @@ def single_player_mode():
             list_of_inputs.append(players_threw[1])
             input((list_of_inputs[1]))
         elif index == 2:
+
             system('clear')
             instructions()
             print()
@@ -60,14 +60,11 @@ def single_player_mode():
             input((list_of_inputs[2]))
         elif index >= 3:
             if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2] != list_of_inputs [1]:
-                
-                # sum_of_inputs.append(list_of_inputs)
+                sum_of_inputs.append(list_of_inputs)
+                input(sum_of_inputs)
+                # list_of_inputs.clear()
                 input(list_of_inputs)
-                
-                # input(sum_of_inputs)
-                list_of_inputs.clear()
-                input(list_of_inputs)
-                
+                players_through_clear()
                 single_player_mode()
                 
         else:
