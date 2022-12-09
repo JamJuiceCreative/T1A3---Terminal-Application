@@ -33,7 +33,14 @@ def single_player_mode():
 
     for index in range(len(number_of_players())+1):
         if count >= (len(which_challenge())):
-            break
+            if sum(Score) != 0:
+                print(f"Congratulations! You scored {sum(Score)} points!!!")
+                # print("I'm sorry, you failed all of the challenges, better luck next time.")
+                break
+            else:
+                # print(f"Congratulations! You scored {sum(Score)} points!!!")
+                print("I'm sorry, you failed all of the challenges, better luck next time.")
+                break
         elif count <=(len(which_challenge())):
             if index == 0:
                 print (number_of_players()[0])
@@ -106,10 +113,9 @@ def single_player_mode():
                         players_through_clear()
                         count +=1
                         single_player_mode()
-            else:
-                print("You got a total score of High Score")
-        else:
-            print("You have finished the game, goodbye")
+
+
+            
 
        
 
