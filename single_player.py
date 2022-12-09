@@ -19,8 +19,8 @@ from instructions import instructions
 
 # do_cards_match()
 
-
-count = 0
+sum_of_inputs = []
+counter = 0
 
 def single_player_mode():
     
@@ -59,14 +59,19 @@ def single_player_mode():
             list_of_inputs.append(players_threw[2])
             input((list_of_inputs[2]))
         elif index >= 3:
-            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2]:
+            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2] != list_of_inputs [1]:
+                
+                # sum_of_inputs.append(list_of_inputs)
+                input(list_of_inputs)
+                
+                # input(sum_of_inputs)
                 list_of_inputs.clear()
-                input("fuck me")
+                input(list_of_inputs)
                 
                 single_player_mode()
                 
         else:
-            print(list_of_inputs)
+            input(list_of_inputs)
 
 single_player_mode()
 # print(count)
