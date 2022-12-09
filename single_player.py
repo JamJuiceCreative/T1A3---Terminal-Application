@@ -20,8 +20,9 @@ from instructions import instructions
 # do_cards_match()
 
 
-counter = 0
+
 sum_of_inputs = []
+round = len(sum_of_inputs)
 def single_player_mode():
     
     system('clear')
@@ -35,6 +36,7 @@ def single_player_mode():
         
         if index == 0:
             print (number_of_players()[0])
+            print(round)
             print (number_of_challenges()[0])
             player_turn()
             list_of_inputs.append(players_threw[0])
@@ -59,7 +61,9 @@ def single_player_mode():
             list_of_inputs.append(players_threw[2])
             input((list_of_inputs[2]))
         elif index >= 3:
-            if list_of_inputs[0]!= list_of_inputs[1] and list_of_inputs[2] != list_of_inputs [1]:
+            # check if all items in list_of_inputs are the same
+            if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
+        
                 sum_of_inputs.append(list_of_inputs)
                 input(sum_of_inputs)
                 # list_of_inputs.clear()
