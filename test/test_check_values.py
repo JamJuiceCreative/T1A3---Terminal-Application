@@ -15,11 +15,19 @@ def value():
     value_list = [challenge1.value, challenge2.value, challenge3.value]
     return (value_list)
 
+
+
 print(which_challenge())
 
 print(score())
-print(card_values)
-print(value())
+print(card_values["5"])
+print(value()[0])
+
+def test_check_values():
+
+    assert (card_values["5"]) == (value()[0])
+
+
 
 
 
