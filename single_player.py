@@ -36,7 +36,7 @@ def single_player_mode():
         
         if index == 0:
             print (number_of_players()[0])
-            print(round)
+            print(f"round:{round}")
             print (number_of_challenges()[0])
             player_turn()
             list_of_inputs.append(players_threw[0])
@@ -75,9 +75,4 @@ def single_player_mode():
             input(list_of_inputs)
 
 single_player_mode()
-# print(count)
-   
 
-# single_player_mode()
-# print(len(number_of_players()))
-# single_player_mode()
