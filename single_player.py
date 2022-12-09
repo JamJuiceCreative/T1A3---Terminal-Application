@@ -19,9 +19,6 @@ from card_values import card_values
 # print ("those bad boys match")
 
 # do_cards_match()
-
-
-
 sum_of_inputs = []
 count = 0
 value_of_same = []
@@ -35,66 +32,85 @@ def single_player_mode():
     
 
     for index in range(len(number_of_players())+1):
-        
-        
-        if index == 0:
-            print (number_of_players()[0])
-            print(f"Round:{count+1}")
-            print (which_challenge()[count])
-            player_turn()
-            list_of_inputs.append(players_threw[0])
-            input((list_of_inputs[0]))
-        elif index == 1:
-            system('clear')
-            instructions()
-            print()
-            print (number_of_players()[1])
-            print(f"Round:{count+1}")
-            print (which_challenge()[count])
-            player_turn()
-            list_of_inputs.append(players_threw[1])
-            input((list_of_inputs[1]))
-        elif index == 2:
-
-            system('clear')
-            instructions()
-            print()
-            print (number_of_players()[2])
-            print(f"Round:{count+1}")
-            print (which_challenge()[count])
-            player_turn()
-            list_of_inputs.append(players_threw[2])
-            input((list_of_inputs[2]))
-        elif index >= 3:
-            # check if all items in list_of_inputs are the same
-            if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
-                sum_of_inputs.append(list_of_inputs)
-                input(sum_of_inputs)
-                input(list_of_inputs)
-                players_through_clear()
-                single_player_mode()
-            elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
-                sum_of_inputs.append(list_of_inputs)
-                value_of_same.append(list_of_inputs[0])
-                if(card_values[value_of_same[0]] >= value()[0]):
-                    print("You did it!!!!")
-                    Score.append(score()[count])
-                    print(f"You scored {score()[count]} points")
-                    input(value_of_same)
-                    value_of_same.clear()
+        if count >= (len(which_challenge())):
+            break
+        elif count <=(len(which_challenge())):
+            if index == 0:
+                print (number_of_players()[0])
+                print(f"Round:{count+1}")
+                print (which_challenge()[count])
+                player_turn()
+                if "King" in players_threw:
+                    players_through_clear()
+                    count +=1
+                    single_player_mode()
+                else: 
+                    list_of_inputs.append(players_threw[0])
+                    input((list_of_inputs[0]))
+            elif index == 1:
+                system('clear')
+                instructions()
+                print()
+                print (number_of_players()[1])
+                print(f"Round:{count+1}")
+                print (which_challenge()[count])
+                player_turn()
+                if "King" in players_threw:
                     players_through_clear()
                     count +=1
                     single_player_mode()
                 else:
-                    print("you failed!!!")
-                    input(value_of_same)
-                    value_of_same.clear()
-                    
+                    list_of_inputs.append(players_threw[1])
+                    input((list_of_inputs[1]))
+            elif index == 2:
+                system('clear')
+                instructions()
+                print()
+                print (number_of_players()[2])
+                print(f"Round:{count+1}")
+                print (which_challenge()[count])
+                player_turn()
+                if "King" in players_threw:
                     players_through_clear()
                     count +=1
                     single_player_mode()
+                else:
+                    list_of_inputs.append(players_threw[2])
+                    input((list_of_inputs[2]))
+            elif index >= 3:
+                # check if all items in list_of_inputs are the same
+                if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
+                    sum_of_inputs.append(list_of_inputs)
+                    input(sum_of_inputs)
+                    input(list_of_inputs)
+                    players_through_clear()
+                    single_player_mode()
+                elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
+                    sum_of_inputs.append(list_of_inputs)
+                    value_of_same.append(list_of_inputs[0])
+                    if(card_values[value_of_same[0]] >= value()[0]):
+                        print("You did it!!!!")
+                        Score.append(score()[count])
+                        input(Score)
+                        print(f"You scored {score()[count]} points")
+                        input(value_of_same)
+                        value_of_same.clear()
+                        players_through_clear()
+                        count +=1
+                        single_player_mode()
+                    else:
+                        print("you failed!!!")
+                        input(value_of_same)
+                        value_of_same.clear()
+                        
+                        players_through_clear()
+                        count +=1
+                        single_player_mode()
+            else:
+                print("You got a total score of High Score")
         else:
-            single_player_mode()
+            print("You have finished the game, goodbye")
+
        
 
 single_player_mode()

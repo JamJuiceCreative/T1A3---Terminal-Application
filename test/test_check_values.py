@@ -16,7 +16,7 @@ def value():
     return (value_list)
 
 
-
+print(len(which_challenge()))
 print(which_challenge())
 
 print(score())
