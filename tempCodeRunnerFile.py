@@ -1,1 +1,1 @@
-print()
+return None

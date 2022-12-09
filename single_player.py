@@ -1,6 +1,6 @@
 from os import system
 from players import Player, number_of_players
-from player_turn import player_turn, players_threw, players_through_clear
+from player_turn import player_turn, players_threw, players_threw_clear
 from list_of_challenges import which_challenge, score, value
 from instructions import instructions
 from card_values import card_values
@@ -33,7 +33,7 @@ def single_player_mode():
 
     for index in range(len(number_of_players())+1):
         if count >= (len(which_challenge())):
-            if sum(Score) != 0:
+            if sum(Score) > 0:
                 print(f"Congratulations! You scored {sum(Score)} points!!!")
                 # print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
@@ -48,9 +48,10 @@ def single_player_mode():
                 print (which_challenge()[count])
                 player_turn()
                 if "King" in players_threw:
-                    players_through_clear()
+                    players_threw_clear()
                     count +=1
                     single_player_mode()
+                    return None
                 else: 
                     list_of_inputs.append(players_threw[0])
                     input((list_of_inputs[0]))
@@ -63,9 +64,10 @@ def single_player_mode():
                 print (which_challenge()[count])
                 player_turn()
                 if "King" in players_threw:
-                    players_through_clear()
+                    players_threw_clear()
                     count +=1
                     single_player_mode()
+                    return None
                 else:
                     list_of_inputs.append(players_threw[1])
                     input((list_of_inputs[1]))
@@ -78,9 +80,10 @@ def single_player_mode():
                 print (which_challenge()[count])
                 player_turn()
                 if "King" in players_threw:
-                    players_through_clear()
+                    players_threw_clear()
                     count +=1
                     single_player_mode()
+                    return None
                 else:
                     list_of_inputs.append(players_threw[2])
                     input((list_of_inputs[2]))
@@ -90,7 +93,7 @@ def single_player_mode():
                     sum_of_inputs.append(list_of_inputs)
                     input(sum_of_inputs)
                     input(list_of_inputs)
-                    players_through_clear()
+                    players_threw_clear()
                     single_player_mode()
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
@@ -102,7 +105,7 @@ def single_player_mode():
                         print(f"You scored {score()[count]} points")
                         input(value_of_same)
                         value_of_same.clear()
-                        players_through_clear()
+                        players_threw_clear()
                         count +=1
                         single_player_mode()
                     else:
@@ -110,7 +113,7 @@ def single_player_mode():
                         input(value_of_same)
                         value_of_same.clear()
                         
-                        players_through_clear()
+                        players_threw_clear()
                         count +=1
                         single_player_mode()
 
