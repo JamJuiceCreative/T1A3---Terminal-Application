@@ -29,6 +29,7 @@ def multi_player_mode():
                 break
         elif count <=(len(which_challenge())):
             if index == 0:
+                print()
                 print (number_of_players()[0])
                 print(f"Round:{count+1}")
                 print (which_challenge()[count])
@@ -134,8 +135,7 @@ def enter_high_score():
     for line in range(5):
         print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
 
-        
-    
+multi_player_mode()
 
 
 

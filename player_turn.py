@@ -5,15 +5,14 @@ players_threw = []
 
 def player_turn():
 
-    
     card_values={
         "Ace": 50,
         "2": 100,
         "3": 150,
         "5": 250,
         "8" : 400,
-        "King": 1000 
     }
+
     
     single_player = ""
     

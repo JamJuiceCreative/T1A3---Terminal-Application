@@ -1,6 +1,7 @@
 from os import system
 from open_high_scores import open_high_scores
 from multi_player import multi_player_mode
+from single_player import single_player_mode
 # game intro - maybe include some ascii art if I have time
 
 def game_intro():
@@ -47,7 +48,7 @@ while option != "5":
     option = menu_options()
     system('clear')
     if option == "1":
-        print("Single player Game")
+        single_player_mode()
     elif option == "2":
         multi_player_mode()
     elif option == "3":
