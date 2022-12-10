@@ -31,6 +31,7 @@ def player_turn():
         else: 
             input("Not a valid selection. Press Enter to Continue")
     players_threw.append(player_threw[0])
+    
 
 def players_threw_clear():
     players_threw.clear()

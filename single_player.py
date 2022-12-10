@@ -4,7 +4,7 @@ from player_turn import player_turn, players_threw, players_threw_clear
 from list_of_challenges import which_challenge, score, value
 from instructions import instructions
 from card_values import card_values
-from random_player_turn import random_player_turn
+from random_player_turn import random_player_turn, random_players_threw
 
 
 sum_of_inputs = []
@@ -50,13 +50,13 @@ def single_player_mode():
                 print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 random_player_turn()
-                if "King" in players_threw:
+                if "King" in random_players_threw:
                     players_threw_clear()
                     count +=1
                     single_player_mode()
                     return None
                 else:
-                    list_of_inputs.append(players_threw[1])
+                    list_of_inputs.append(random_players_threw[1])
                     input((list_of_inputs[1]))
             elif index == 2:
                 system('clear')
@@ -66,13 +66,13 @@ def single_player_mode():
                 print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 random_player_turn()
-                if "King" in players_threw:
+                if "King" in random_players_threw:
                     players_threw_clear()
                     count +=1
                     single_player_mode()
                     return None
                 else:
-                    list_of_inputs.append(players_threw[2])
+                    list_of_inputs.append(random_players_threw[2])
                     input((list_of_inputs[2]))
             elif index >= 3:
                 # check if all items in list_of_inputs are the same
