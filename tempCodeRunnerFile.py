@@ -1,1 +1,2 @@
-from os import system
+
+    print("Pos\tName\tPoints\n")
