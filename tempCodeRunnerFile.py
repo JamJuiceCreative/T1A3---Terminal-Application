@@ -1,1 +1,1 @@
-high_scores.close()
+from os import system

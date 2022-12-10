@@ -5,20 +5,7 @@ from list_of_challenges import which_challenge, score, value
 from instructions import instructions
 from card_values import card_values
 
-# here is where the single player mode will run
 
-# list_of_inputs = []
-# list_of_inputs.append(player_threw)
-# survivor1 = [list_of_inputs[0]]
-# survivor2 = [list_of_inputs[1]]
-# survivor3 = [list_of_inputs[2]]
-
-# def do_cards_match():
-#     while survivor1 != survivor2 and survivor3:
-#         print ("this is a test")
-# print ("those bad boys match")
-
-# do_cards_match()
 sum_of_inputs = []
 count = 0
 value_of_same = []
@@ -29,12 +16,11 @@ def multi_player_mode():
     system('clear')
     instructions()
     list_of_inputs = []
-    
-
     for index in range(len(number_of_players())+1):
         if count >= (len(which_challenge())):
             if sum(Score) > 0:
                 print(f"Congratulations! You scored {sum(Score)} points!!!")
+                enter_high_score()
                 # print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
             else:
@@ -116,6 +102,25 @@ def multi_player_mode():
                         players_threw_clear()
                         count +=1
                         multi_player_mode()
+
+def enter_high_score():    
+
+    name=input("enter your name: ")
+    file=open("score.txt", "a")
+    file.write(name +"\t" +str(sum(Score))+"\n")
+    file.close()
+
+    file=open("score.txt", "r")
+    readthefile = file.readlines()
+    sortedData = sorted(readthefile,reverse=True)
+
+    print()
+    print("Pos\tName\t\tPoints")
+
+    for line in range(5):
+        print(str(line+1)+"\t"+str(sortedData[line]))
+    
+
 
 
 

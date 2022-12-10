@@ -62,3 +62,5 @@ while option != "5":
     system('clear')
 
 print("See you on the other side, survivor!")
+
+menu_options()
