@@ -23,7 +23,7 @@ sum_of_inputs = []
 count = 0
 value_of_same = []
 Score = []
-def single_player_mode():
+def multi_player_mode():
     global count
     count +1
     system('clear')
@@ -50,7 +50,7 @@ def single_player_mode():
                 if "King" in players_threw:
                     players_threw_clear()
                     count +=1
-                    single_player_mode()
+                    multi_player_mode()
                     return None
                 else: 
                     list_of_inputs.append(players_threw[0])
@@ -66,7 +66,7 @@ def single_player_mode():
                 if "King" in players_threw:
                     players_threw_clear()
                     count +=1
-                    single_player_mode()
+                    multi_player_mode()
                     return None
                 else:
                     list_of_inputs.append(players_threw[1])
@@ -82,7 +82,7 @@ def single_player_mode():
                 if "King" in players_threw:
                     players_threw_clear()
                     count +=1
-                    single_player_mode()
+                    multi_player_mode()
                     return None
                 else:
                     list_of_inputs.append(players_threw[2])
@@ -94,7 +94,7 @@ def single_player_mode():
                     input(sum_of_inputs)
                     input(list_of_inputs)
                     players_threw_clear()
-                    single_player_mode()
+                    multi_player_mode()
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
                     value_of_same.append(list_of_inputs[0])
@@ -107,7 +107,7 @@ def single_player_mode():
                         value_of_same.clear()
                         players_threw_clear()
                         count +=1
-                        single_player_mode()
+                        multi_player_mode()
                     else:
                         print("you failed!!!")
                         input(value_of_same)
@@ -115,12 +115,7 @@ def single_player_mode():
                         
                         players_threw_clear()
                         count +=1
-                        single_player_mode()
+                        multi_player_mode()
 
 
-            
-
-       
-
-single_player_mode()
 

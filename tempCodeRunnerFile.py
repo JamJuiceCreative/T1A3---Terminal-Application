@@ -1,1 +1,1 @@
-return None
+high_scores.close()

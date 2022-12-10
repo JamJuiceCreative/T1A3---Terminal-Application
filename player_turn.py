@@ -38,19 +38,6 @@ def players_threw_clear():
 
 
 
-       
-    #     elif single_player == "King":
-    #         continue
-    #     else: 
-    #         print("That's not a valid option!")
-        
-    #     system('clear')
-    # print ("WTF mate")
-
-
-
-
-
         
  
 
