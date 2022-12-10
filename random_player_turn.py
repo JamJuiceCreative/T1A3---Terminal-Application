@@ -21,13 +21,14 @@ def random_player_turn():
         single_player = random_card()
         if single_player == "King":
             player_threw.append(single_player)
-            input("You have voted to skip the challenge. Press Enter to Continue...")
+            input("Survivor has voted to skip the challenge. Press Enter to Confirm...")
             continue
         elif single_player in card_values:
             player_threw.append(single_player)
-            input((f"You threw {player_threw}. Press Enter to Continue..."))
+            input((f"Survivor threw {player_threw}. Press Enter to Confirm..."))
             break
-        else: 
+        else:
+            print(single_player) 
             input("Not a valid selection. Press Enter to Continue")
     players_threw.append(player_threw[0])
 

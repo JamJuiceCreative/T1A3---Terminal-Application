@@ -95,7 +95,7 @@ def single_player_mode():
                         value_of_same.clear()
                         players_threw_clear()
                         count +=1
-                        multi_player_mode()
+                        single_player_mode()
                     else:
                         print("you failed!!!")
                         input(value_of_same)
