@@ -1,2 +1,1 @@
-
-    print("Pos\tName\tPoints\n")
+ # print(str(line+1)+"\t"+str(sortedData[line]))

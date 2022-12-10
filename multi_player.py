@@ -103,24 +103,27 @@ def multi_player_mode():
                         count +=1
                         multi_player_mode()
 
-def enter_high_score():    
-
-    name=input("Enter the first 5 letters of your name: ")
+def enter_high_score():
+    print()
+    name=input("Please Enter You Name: ")
     file=open("score.txt", "a")
-    file.write((name[1:6]) +"\t" +str(sum(Score))+"\n")
+    file.write(str(sum(Score)) +"\t" +(name)+ "\n")
+    
     file.close()
 
     file=open("score.txt", "r")
     readthefile = file.readlines()
     sortedData = sorted(readthefile,reverse=True)
 
-    print()
-    print("Pos\tName\tPoints\n")
+    print("Top 5 Scores!")
+    print("Pos\tPoints\tName")
 
     for line in range(5):
+        # print(str(sortedData[line])+"\t"+str(line+1))
         print(str(line+1)+"\t"+str(sortedData[line]))
+        
     
-
+enter_high_score()
 
 
 

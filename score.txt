@@ -1,1 +1,6 @@
-r Lab	1000
+50	S.M.Gimp
+75	T.Moore
+100	Rob Kirk
+200	G. A. R.
+250	R Grimes
+0	Jim
