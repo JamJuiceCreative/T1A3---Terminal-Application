@@ -6,4 +6,3 @@ card_values={
         "8" : 400,
     }
 
-print(card_values['2'])

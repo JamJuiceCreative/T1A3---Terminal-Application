@@ -75,6 +75,7 @@ def multi_player_mode():
                     input((list_of_inputs[2]))
             elif index >= 3:
                 # check if all items in list_of_inputs are the same
+                
                 if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
                     input(sum_of_inputs)
@@ -102,28 +103,40 @@ def multi_player_mode():
                         players_threw_clear()
                         count +=1
                         multi_player_mode()
-
+    count = 0
 def enter_high_score():
     print()
     name=input("Please Enter You Name: ")
     file=open("score.txt", "a")
-    file.write(str(sum(Score)) +"\t" +(name)+ "\n")
-    
+    if sum(Score)<100000 and sum(Score)>9999: 
+        file.write( "0"+ str(sum(Score)) +"\t" +(name)+ "\n")
+    elif sum(Score)<10000 and sum(Score)>999: 
+        file.write( "00"+ str(sum(Score)) +"\t" +(name)+ "\n")
+    elif sum(Score)<1000 and sum(Score)>99: 
+        file.write( "000"+ str(sum(Score)) +"\t" +(name)+ "\n")
+    elif sum(Score)<100 and sum(Score)>9: 
+        file.write( "0000"+ str(sum(Score)) +"\t" +(name)+ "\n")
+    elif sum(Score)<10: 
+        file.write( "00000"+ str(sum(Score)) +"\t" +(name)+ "\n")
+    else: print("You've scored off the board you're so good!")    
+        
     file.close()
+    Score.clear()
+    
 
     file=open("score.txt", "r")
     readthefile = file.readlines()
-    sortedData = sorted(readthefile,reverse=True)
+    sorted_scores = sorted(readthefile,reverse=True)
 
-    print("Top 5 Scores!")
-    print("Pos\tPoints\tName")
+    print("Top 5 Scores! \n")
+    print("Pos\tPoints\tName\n")
 
     for line in range(5):
-        # print(str(sortedData[line])+"\t"+str(line+1))
-        print(str(line+1)+"\t"+str(sortedData[line]))
+        print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
+
         
     
-enter_high_score()
+
 
 
 

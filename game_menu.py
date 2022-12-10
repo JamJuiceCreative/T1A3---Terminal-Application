@@ -1,5 +1,5 @@
 from os import system
-from high_scores import open_high_scores
+from open_high_scores import open_high_scores
 from multi_player import multi_player_mode
 # game intro - maybe include some ascii art if I have time
 
