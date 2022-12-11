@@ -1,2 +1,1 @@
-print("This is the message that will be deleted.",)
-# print("\r")
+card_range = {i:j for i,j in sorted_cards.items() if i not in resultDictionary}
