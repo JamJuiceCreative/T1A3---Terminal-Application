@@ -12,16 +12,13 @@ def random_player_turn():
     count +=1
     if count == len(number_of_players()):
         count = 1
-    print(count)
     card_values={
         "ace": 50,
         "2": 100,
         "3": 150,
         "5": 250,
-        "8" : 400
-        
+        "8" : 400    
     }
-
     single_player = ""
    
     while single_player != "king":
@@ -34,8 +31,7 @@ def random_player_turn():
             continue
         elif single_player in card_values:
             player_threw.append(single_player)
-            input((f"{number_of_players()[count]} threw {player_threw[0].capitalize()}. Press Enter to Confirm..."))
-            
+            input((f"{number_of_players()[count]} threw {player_threw[0].capitalize()}. Press Enter to Confirm..."))           
             break
         else:
             print(single_player) 

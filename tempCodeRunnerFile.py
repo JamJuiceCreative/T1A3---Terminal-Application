@@ -1,1 +1,1 @@
-count = 0
+input("You didn't reach a consensus. Please try again. Press Enter to Continue...")

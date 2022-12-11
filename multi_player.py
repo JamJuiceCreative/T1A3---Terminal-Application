@@ -43,7 +43,6 @@ def multi_player_mode():
                     return None
                 else: 
                     list_of_inputs.append(players_threw[0])
-                    input((list_of_inputs[0]))
             elif index == 1:
                 system('clear')
                 instructions()
@@ -61,7 +60,6 @@ def multi_player_mode():
                     return None
                 else:
                     list_of_inputs.append(players_threw[1])
-                    input((list_of_inputs[1]))
             elif index == 2:
                 system('clear')
                 instructions()
@@ -79,14 +77,11 @@ def multi_player_mode():
                     return None
                 else:
                     list_of_inputs.append(players_threw[2])
-                    input((list_of_inputs[2]))
             elif index >= 3:
-                # check if all items in list_of_inputs are the same
-                
+                # check if all items in list_of_inputs are the same   
                 if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
-                    input(sum_of_inputs)
-                    input(list_of_inputs)
+                    input("You didn't reach a consensus. Please try again. Press Enter to Continue...")
                     players_threw_clear()
                     multi_player_mode()
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
@@ -142,7 +137,7 @@ def enter_high_score():
         print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
 
 
-
+multi_player_mode()
 
 
 
