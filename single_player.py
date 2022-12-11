@@ -21,12 +21,12 @@ def single_player_mode():
     for index in range(len(number_of_players())+1):
         if count >= (len(which_challenge())):
             if sum(Score) > 0:
+                print()
                 print(f"Congratulations! You scored {sum(Score)} points!!!")
                 enter_high_score()
-                # print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
             else:
-                # print(f"Congratulations! You scored {sum(Score)} points!!!")
+                print()
                 print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
         elif count <=(len(which_challenge())):
@@ -85,15 +85,19 @@ def single_player_mode():
                 
                 if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
-                    input("You didn't reach a consensus. Please try again. Press Enter to Continue...")
+                    print()
+                    print("You didn't reach a consensus. Please try again.")
+                    input("Press Enter to Continue...")
                     players_threw_clear()
                     single_player_mode()
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
                     value_of_same.append(list_of_inputs[0])
-                    
+                    print()
+                    input("You've reached a consensus! Press Enter to see if you succeeded in the challenge...")
                     if(card_values[value_of_same[0]] >= value()[0]):
-                        print("You did it!!!!")
+                        print()
+                        print("Congratulations! You did it!!!!")
                         Score.append(score()[count])
                         input(Score)
                         print(f"You scored {score()[count]} points")
@@ -103,10 +107,10 @@ def single_player_mode():
                         count +=1
                         single_player_mode()
                     else:
-                        print("You failed!!! Try do better on the next challenge.")
-                        input(value_of_same)
+                        print()
+                        print("You've failed the challenge! Keep this up and your group won't survive for long!!!")
+                        input("Press Enter to Continue...")
                         value_of_same.clear()
-                        
                         players_threw_clear()
                         count +=1
                         single_player_mode()
@@ -141,4 +145,3 @@ def enter_high_score():
     for line in range(5):
         print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
 
-single_player_mode()
