@@ -1,1 +1,1 @@
-input("You didn't reach a consensus. Please try again. Press Enter to Continue...")
+if players_threw == len(number_of_players()):

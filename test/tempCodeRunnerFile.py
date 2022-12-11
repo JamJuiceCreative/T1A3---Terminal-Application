@@ -1,1 +1,1 @@
-card_range = {i:j for i,j in sorted_cards.items() if i not in resultDictionary}
+print(index_list)

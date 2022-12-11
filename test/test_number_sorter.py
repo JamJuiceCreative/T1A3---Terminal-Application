@@ -1,86 +1,17 @@
-# # from single_player import number_sorter
-# def test_number_sorter():
-#     card_index={
-            
-#             "2": 1,
-#             "3": 2,
-#             "5": 3,
-#             "ace": 0,
-#             "8" : 4,
-#             "king": 5
-#         }
-#     sorted_cards = sorted(card_index.items(), key=lambda x:x[1])
-
-#     drawn_cards_dict = {}
-
-#     print(sorted_cards)
-#     drawn_cards = ["ace", "8", "3"]
-#     if drawn_cards[0] in card_index.keys():
-#         print (key,value)
-
-#     # drawn_cards = ["Ace", "3", "8"]
-#     # assert drawn_cards in card_index == True
-# test_number_sorter()
-
-# my_dict = {
-#     'names': ['alice', 'bobbyhadz', 'carl'],
-#     'tasks': ['develop', 'test', 'ship'],
-#     'language': ['js', 'py', 'ts']
-# }
-
-# butts = "develop"
-# print(butts)
-
-# for key, value in my_dict.items():
-#     if butts in value:
-#         print(key, value)
-
-
-# card_index={
-            
-#             "2": 1,
-#             "3": 2,
-#             "5": 3,
-#             "ace": 0,
-#             "8" : 4,
-#             "king": 5
-#         }
-# def card_sorter():
-#     for key, value in card_index.items():
-#         if "ace" in key:
-        
-#             (key, value)
-
-# thrown_cards_sorter = {}
-
-# thrown_cards_sorter[card_sorter] = card_sorter
-
-
-
-# print(card_sorter()) 
-# # print(thrown_cards_sorter{})
-
-
-# GOOD CODE STARTS HERE
-
 card_index={
             "ace": 0,
             "2": 1,
             "3": 2,
             "5": 3,
             "8" : 4,
-            "king": 5
         }
-
-        
 
 card_index2={
             "ace": 0,
             "2": 1,
             "3": 2,
             "5": 3,
-            "8" : 4,
-            "king": 5
+            "8" : 4
         }
 
 thrown_cards = ["ace", "5", "8"]
@@ -105,10 +36,11 @@ print("The input Tuple:", inputTuple)
 resultDictionary = dict((x, y) for x, y in inputTuple)
 print("The result dictionary:", resultDictionary)
 
-
 card_range = {i:j for i,j in card_index2.items() if i not in resultDictionary}
 
 print("The outside cards: ", card_range)
+
+
 # input tuple
 inputTuple = [('ace', 0), ('5', 3), ('8', 4)]
 print("The input Tuple:", inputTuple)
@@ -117,20 +49,60 @@ print("The input Tuple:", inputTuple)
 resultDictionary = dict((x, y) for x, y in inputTuple)
 print("The result dictionary:", resultDictionary)
 
+a_dictionary = {"a": 1, "b": 2}
+values = a_dictionary. values()
+values_list = list(values)
+a_value = values_list[0]
+print(a_value)
+
+card_index={
+            "ace": 0,
+            "2": 1,
+            "3": 2,
+            "5": 3,
+            "8" : 4,
+            "king": 5
+        }
+card_tuple = sorted(card_index.items(), key=lambda x:x[1])
+# card_tuple = card_tuple[1:4]
+print(card_tuple)
+[('ace', 0), ('5', 3), ('8', 4)]
+
+index = card_tuple.index(('ace',0))
+print(index)
+# card_range1 = list(card_index).index(index1)
+
+# animals = ['cat', 'dog', 'rabbit', 'horse']
+
+# # get the index of 'dog'
+# index = animals.index('dog')
 
 
+# print(index)
 
-# GOOD CODE ENDS HERE
+# # Output: 1
 
-# sorted_cards = {i:j for i,j in sorted_cards() if i not in sorted_cards_slice}
-# print(sorted_cards)
+card_index={
+            "ace": 0,
+            "2": 1,
+            "3": 2,
+            "5": 3,
+            "8" : 4,
+        }
 
-# dict1 = {'ana': 'http://ted.com', 'louise': 'http://reddit.com', 'sarah':'http://time.com'}
-# dict2 = {'patricia': 'http://yahoo.com', 'ana': 'http://ted.com',
-#          'louise': 'http://reddit.com', 'florence': 'http://white.com'}
+index_list = list(card_index)
+# print(index_list)
 
-# dict2 = {i:j for i,j in dict2.items() if i not in dict1}
+outside_list = list(card_range)
+print(outside_list[1])
 
-# print(dict2)
+card_range1= index_list.index(outside_list[0])
+print(card_range1)
 
-# input tuple
+card_range2= index_list.index(outside_list[1])
+print(card_range2)
+
+remaining_cards = card_tuple[card_range1:card_range2+1]
+print(remaining_cards)
+
+print(outside_list)

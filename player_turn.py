@@ -5,17 +5,14 @@ players_threw = []
 
 def player_turn():
     
-
     card_values={
         "ace": 50,
         "2": 100,
         "3": 150,
         "5": 250,
-        "8" : 400
-       
+        "8" : 400,
+        "king": 1000     
     }
-
-    
     single_player = ""
     
     while single_player != "king":
@@ -33,6 +30,7 @@ def player_turn():
             input("Not a valid selection. Press Enter to Continue...")
             
     players_threw.append(player_threw[0])
+    
     
 
 def players_threw_clear():
