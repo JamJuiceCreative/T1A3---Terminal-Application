@@ -1,1 +1,1 @@
- # print(str(line+1)+"\t"+str(sortedData[line]))
+count = 0

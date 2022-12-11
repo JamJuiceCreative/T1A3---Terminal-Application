@@ -6,3 +6,5 @@
 007000	Jimbo
 005000	Jimbo
 007000	Bob Saggat
+005000	Stinky
+001000	MR MAgoo

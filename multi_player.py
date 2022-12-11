@@ -30,11 +30,13 @@ def multi_player_mode():
         elif count <=(len(which_challenge())):
             if index == 0:
                 print()
-                print (number_of_players()[0])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[0])
+                print()
                 player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     multi_player_mode()
@@ -46,11 +48,13 @@ def multi_player_mode():
                 system('clear')
                 instructions()
                 print()
-                print (number_of_players()[1])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[1])
+                print()
                 player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     multi_player_mode()
@@ -62,11 +66,13 @@ def multi_player_mode():
                 system('clear')
                 instructions()
                 print()
-                print (number_of_players()[2])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[2])
+                print()
                 player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     multi_player_mode()
@@ -135,7 +141,7 @@ def enter_high_score():
     for line in range(5):
         print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
 
-multi_player_mode()
+
 
 
 

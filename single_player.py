@@ -17,6 +17,7 @@ def single_player_mode():
     system('clear')
     instructions()
     list_of_inputs = []
+    
     for index in range(len(number_of_players())+1):
         if count >= (len(which_challenge())):
             if sum(Score) > 0:
@@ -31,11 +32,13 @@ def single_player_mode():
         elif count <=(len(which_challenge())):
             if index == 0:
                 print()
-                print (number_of_players()[0])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[0])
+                print()
                 player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     single_player_mode()
@@ -47,11 +50,13 @@ def single_player_mode():
                 system('clear')
                 instructions()
                 print()
-                print (number_of_players()[1])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[1])
+                print()
                 random_player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     single_player_mode()
@@ -63,11 +68,13 @@ def single_player_mode():
                 system('clear')
                 instructions()
                 print()
-                print (number_of_players()[2])
-                print(f"Round:{count+1}")
                 print (which_challenge()[count])
+                print()
+                print(f"Round:{count+1}")
+                print (number_of_players()[2])
+                print()
                 random_player_turn()
-                if "King" in players_threw:
+                if "king" in players_threw:
                     players_threw_clear()
                     count +=1
                     single_player_mode()
@@ -98,7 +105,7 @@ def single_player_mode():
                         count +=1
                         single_player_mode()
                     else:
-                        print("you failed!!!")
+                        print("You failed!!! Try do better on the next challenge.")
                         input(value_of_same)
                         value_of_same.clear()
                         
