@@ -11,4 +11,13 @@ def test_functions():
 
     test_say_hello("hello again")
 
-test_functions()
+list = []
+
+def test_say_hello():
+    return("hello")
+
+print(test_say_hello())
+
+list.append(test_say_hello())
+
+print(list)

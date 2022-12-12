@@ -1,13 +1,14 @@
 from os import system
-from players import Player, number_of_players
+from players import number_of_players
 from player_turn import player_turn, players_threw, players_threw_clear
 from list_of_challenges import which_challenge, score, value
 from instructions import instructions
 from card_values import card_values
 from random_player_turn import random_player_turn
+from bridge import sum_of_inputs
 
 
-sum_of_inputs = []
+
 count = 0
 value_of_same = []
 Score = []

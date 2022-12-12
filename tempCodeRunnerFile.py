@@ -1,1 +1,1 @@
-if players_threw == len(number_of_players()):
+print(remaining_cards_values)

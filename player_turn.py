@@ -1,6 +1,7 @@
 from os import system
 from throw_card_prompt import throw_card_prompt
 
+
 players_threw = []
 
 def player_turn():

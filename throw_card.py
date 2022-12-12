@@ -1,22 +1,25 @@
 import random
-from player_turn import players_threw
-from players import number_of_players
 
-count = 1
+from bridge import sum_of_inputs
+from number_sorter import run_next, remaining_cards_values
+
+
 # assign values of cards able to be thrown
 def random_card():
-    global count
-    count +1
-    if count != len(number_of_players()):
+    if len(sum_of_inputs) == 1:
         card_values = ["ace", "2" ,"3" ,"5" ,"8" , "king"]
         # create random number generator
         def throw_card():
             return(random.sample(card_values, k=1))
-    else:
-        card_values = ["Mad" ,"Hatter" ,"is" ,"coming"]
-        def throw_card():
-            return(random.sample(card_values, k=1))     
-        
-    return("".join(throw_card()))
 
+    else:
+        print(sum_of_inputs)
+        print(run_next())
+        card_values_range = remaining_cards_values
+        def throw_card():
+            return(random.sample(card_values_range, k=1))
+    print(remaining_cards_values)
+    print("This is the sum of inputs:",sum_of_inputs)
+    return("".join(throw_card()))
+exit
 
