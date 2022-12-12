@@ -7,6 +7,8 @@ def remove_duplicates(x):
     return list(dict.fromkeys(x))
 thrown_cards_unique = remove_duplicates(thrown_cards)
 
+
+
 def duplicate_card_sorter():
     card_index={
                 "ace": 0,
@@ -39,9 +41,7 @@ def duplicate_card_sorter():
     card_range1= index_list.index(outside_list[0])
     card_range2= index_list.index(outside_list[1])
     remaining_cards = card_tuple[card_range1:card_range2+1]
-    remaining_cards_dict = dict((x,y) for x, y in remaining_cards)
-    remaining_cards_list = list(remaining_cards_dict)
-    return(remaining_cards_list)
+    return(remaining_cards)
 
 
 

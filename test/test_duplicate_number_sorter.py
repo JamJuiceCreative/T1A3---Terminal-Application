@@ -1,4 +1,4 @@
-thrown_cards = ["ace", "ace", "8"]
+thrown_cards = ["ace", "ace", "5"]
 
 
 def remove_duplicates(x):

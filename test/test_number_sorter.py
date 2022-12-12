@@ -66,7 +66,9 @@ def card_sorter():
 
     remaining_cards = card_tuple[card_range1:card_range2+1]
     print("This give the list of remaining cards, inclusive of the outside cards:",remaining_cards)
-
+    remaining_cards_dict = dict((x,y) for x, y in remaining_cards)
+    remaining_cards_list = list(remaining_cards_dict)
+    return(remaining_cards_list)
 def print_monkey_bum():
     print("monkey bum")
 

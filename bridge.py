@@ -1,1 +1,1 @@
-sum_of_inputs = ["ace", "5", "8"]
+sum_of_inputs = [["ace", "5", "8"]]

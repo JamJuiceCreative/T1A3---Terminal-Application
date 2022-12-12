@@ -66,7 +66,7 @@ def run_next():
 
 
 remaining_cards_values.append(card_sorter())
+remaining_cards_values = remaining_cards_values[0]
 
-print(remaining_cards_values)
 
 
