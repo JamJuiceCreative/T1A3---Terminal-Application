@@ -1,14 +1,14 @@
 from players import number_of_players
 from duplicate_number_sorter import duplicate_card_sorter
-from bridge import sum_of_inputs
+
+sum_of_inputs = [["2", "8", "ace"]]
 
 remaining_cards_values = []
 print(remaining_cards_values)
-thrown_cards = sum_of_inputs[-1]
-
 
 
 def check_for_duplicates():
+    thrown_cards = sum_of_inputs[-1]
     def remove_duplicates(x):
         return list(dict.fromkeys(x))
     thrown_cards_unique = remove_duplicates(thrown_cards)
@@ -17,6 +17,7 @@ def check_for_duplicates():
 
 
 def card_sorter():
+    thrown_cards = sum_of_inputs[-1]
     card_index={
                 "ace": 0,
                 "2": 1,
@@ -52,8 +53,13 @@ def card_sorter():
     remaining_cards_list = list(remaining_cards_dict)
     return remaining_cards_list
 
-def run_next():
 
+remaining_cards_values.append(card_sorter())
+remaining_cards_values = remaining_cards_values[0]
+print(remaining_cards_values)
+
+def run_next():
+    thrown_cards = sum_of_inputs[-1]
     if len(thrown_cards) == len(number_of_players()):
         check_for_duplicates()
         if check_for_duplicates() == True:
@@ -62,11 +68,8 @@ def run_next():
             card_sorter()
     else:
         print("something went wrong")
+    print(run_next()) 
 
-
-
-remaining_cards_values.append(card_sorter())
-remaining_cards_values = remaining_cards_values[0]
 
 
 

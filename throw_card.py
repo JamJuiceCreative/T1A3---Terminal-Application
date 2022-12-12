@@ -13,8 +13,7 @@ def random_card():
             return(random.sample(card_values, k=1))
 
     else:
-        print(sum_of_inputs)
-        print(run_next())
+        
         card_values_range = remaining_cards_values
         def throw_card():
             return(random.sample(card_values_range, k=1))
