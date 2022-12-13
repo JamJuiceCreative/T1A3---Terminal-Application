@@ -16,8 +16,11 @@ list = []
 def test_say_hello():
     return("hello")
 
-print(test_say_hello())
-
 list.append(test_say_hello())
 
-print(list)
+n = [3,5,7]
+#function goes here
+def myFun(x):
+    n.append(test_say_hello())
+    return x
+print (myFun(n))

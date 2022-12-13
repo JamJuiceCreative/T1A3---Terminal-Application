@@ -6,7 +6,7 @@ from instructions import instructions
 from card_values import card_values
 from random_player_turn import random_player_turn
 from bridge import sum_of_inputs
-
+from clear_last import clear_last
 
 
 count = 0
@@ -103,14 +103,15 @@ def single_player_mode():
                         input(value_of_same)
                         value_of_same.clear()
                         players_threw_clear()
+                        clear_last(sum_of_inputs)
                         count +=1
                         single_player_mode()
                     else:
                         print("You failed!!! Try do better on the next challenge.")
                         input(value_of_same)
                         value_of_same.clear()
-                        
                         players_threw_clear()
+                        clear_last(sum_of_inputs)
                         count +=1
                         single_player_mode()
     count = 0
@@ -143,3 +144,4 @@ def enter_high_score():
 
     for line in range(5):
         print(" " + str(line+1)+"\t"+str(sorted_scores[line]))
+

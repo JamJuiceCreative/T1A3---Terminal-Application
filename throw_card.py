@@ -14,7 +14,7 @@ def random_card():
 
     else:
         
-        card_values_range = remaining_cards_values
+        card_values_range = run_next()
         def throw_card():
             return(random.sample(card_values_range, k=1))
     print(remaining_cards_values)

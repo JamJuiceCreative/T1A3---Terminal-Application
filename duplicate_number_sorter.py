@@ -1,16 +1,16 @@
-from number_sorter import sum_of_inputs
-
-thrown_cards = sum_of_inputs[-1]
-
+from bridge import sum_of_inputs, remaining_cards_values
 
 def remove_duplicates(x):
     return list(dict.fromkeys(x))
-
+    
 def get_unique_cards():
+    thrown_cards = sum_of_inputs[-1]
     thrown_cards_unique = remove_duplicates(thrown_cards)
     return thrown_cards_unique
 
+
 def duplicate_card_sorter():
+
     card_index={
                 "ace": 0,
                 "2": 1,
@@ -27,8 +27,10 @@ def duplicate_card_sorter():
                 "8" : 4
             }
 
-def    del card_index2[thrown_cards_unique[0]]
-    del card_index2[thrown_cards_unique[1]]
+    del card_index2[get_unique_cards()[0]]
+    del card_index2[get_unique_cards()[1]]
+  
+        
 
 
     card_index2 = {i:j for i,j in card_index.items() if i not in card_index2}
@@ -44,7 +46,12 @@ def    del card_index2[thrown_cards_unique[0]]
     remaining_cards = card_tuple[card_range1:card_range2+1]
     remaining_cards_dict = dict((x,y) for x, y in remaining_cards)
     remaining_cards_list = list(remaining_cards_dict)
-    return remaining_cards_list
+    return (remaining_cards_list)
 
+def append_remaining_card_values(x):
+    remaining_cards_values.append(duplicate_card_sorter())
+    return x
 
+append_remaining_card_values(remaining_cards_values)
 
+print(remaining_cards_values)
