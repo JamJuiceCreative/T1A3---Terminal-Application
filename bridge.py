@@ -1,4 +1,4 @@
-sum_of_inputs = [["2", "5", "8"]]
+sum_of_inputs = [["ace", "5", "8"]]
 remaining_cards_values = []
 
 def clear_last(x):

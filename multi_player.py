@@ -5,6 +5,7 @@ from list_of_challenges import which_challenge, score, value
 from instructions import instructions
 from card_values import card_values
 from bridge import sum_of_inputs
+from clear_last import clear_last
 from penalty import combine_matching, get_penalty
 
 count = 0
@@ -106,6 +107,7 @@ def multi_player_mode():
                         input("Press Enter to Continue...")
                         value_of_same.clear()
                         players_threw_clear()
+                        clear_last(sum_of_inputs)
                         count +=1
                         multi_player_mode()
                     else:
@@ -113,8 +115,8 @@ def multi_player_mode():
                         print("You've failed the challenge! Keep this up and your group won't survive for long!!!")
                         input("Press Enter to Continue...")
                         value_of_same.clear()
-                        
                         players_threw_clear()
+                        clear_last(sum_of_inputs)
                         count +=1
                         multi_player_mode()
     count = 0

@@ -64,4 +64,3 @@ while option != "5":
 
 print("See you on the other side, survivor!")
 
-menu_options()
