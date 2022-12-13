@@ -1,6 +1,7 @@
 from player_turn import players_threw
 from throw_card import random_card
 from players import number_of_players
+from card_values import card_values
 
 count = 0
 
@@ -8,13 +9,7 @@ def random_player_turn():
     global count
     count+=1
 
-    card_values={
-        "ace": 50,
-        "2": 100,
-        "3": 150,
-        "5": 250,
-        "8" : 400    
-    }
+
     single_player = ""
     if count >= len(number_of_players()):
         count = 1

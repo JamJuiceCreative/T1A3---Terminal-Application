@@ -1,19 +1,12 @@
 from os import system
 from throw_card_prompt import throw_card_prompt
-
+from card_values import card_values
 
 players_threw = []
 
 def player_turn():
     
-    card_values={
-        "ace": 50,
-        "2": 100,
-        "3": 150,
-        "5": 250,
-        "8" : 400,
-        "king": 1000     
-    }
+
     single_player = ""
     
     while single_player != "king":

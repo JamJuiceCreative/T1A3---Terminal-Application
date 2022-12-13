@@ -7,12 +7,14 @@ from card_values import card_values
 from random_player_turn import random_player_turn
 from bridge import sum_of_inputs
 from clear_last import clear_last
+from penalty import combine_matching, get_penalty
 
 
 count = 0
 value_of_same = []
 Score = []
 def single_player_mode():
+    sum_of_same = []
     global count
     count +1
     system('clear')
@@ -95,11 +97,18 @@ def single_player_mode():
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
                     value_of_same.append(list_of_inputs[0])
+                    sum_of_same.append(list_of_inputs[0])   
+                    sum_of_same = combine_matching(sum_of_same)
+                    penalty = get_penalty(sum_of_same)
+                    print(penalty)
+                    print()
+                    input("You've reached a consensus! Press Enter to see if you succeeded in the challenge...")
                     if(card_values[value_of_same[0]] >= value()[0]):
-                        print("You did it!!!!")
-                        Score.append(score()[count])
+                        print()
+                        print("Congratulations! You did it!!!")
+                        Score.append(score()[count] + penalty)
                         input(Score)
-                        print(f"You scored {score()[count]} points")
+                        print(f"You scored {score()[count] + penalty} points")
                         input(value_of_same)
                         value_of_same.clear()
                         players_threw_clear()

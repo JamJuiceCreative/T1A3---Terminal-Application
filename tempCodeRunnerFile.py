@@ -1,1 +1,1 @@
-[0].clear()
+print(list_of_inputs)
