@@ -24,7 +24,6 @@ def multi_player_mode():
                 print()
                 print(f"Congratulations! You scored {sum(Score)} points!!!")
                 enter_high_score()
-                # print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
             else:
                 print()
@@ -33,9 +32,9 @@ def multi_player_mode():
         elif count <=(len(which_challenge())):
             if index == 0:
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[0])
                 print()
                 player_turn()
@@ -50,9 +49,9 @@ def multi_player_mode():
                 system('clear')
                 instructions()
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[1])
                 print()
                 player_turn()
@@ -67,9 +66,9 @@ def multi_player_mode():
                 system('clear')
                 instructions()
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[2])
                 print()
                 player_turn()
@@ -80,8 +79,7 @@ def multi_player_mode():
                     return None
                 else:
                     list_of_inputs.append(players_threw[2])
-            elif index >= 3:
-                # check if all items in list_of_inputs are the same   
+            elif index >= 3:   
                 if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
                     print()
@@ -95,8 +93,6 @@ def multi_player_mode():
                     sum_of_same.append(list_of_inputs[0])
                     sum_of_same = combine_matching(sum_of_same)
                     penalty = get_penalty(sum_of_same)
-                    print(penalty)
-                    
                     print()
                     input("You've reached a consensus! Press Enter to see if you succeeded in the challenge...")
                     if(card_values[value_of_same[0]] >= value()[0]):

@@ -26,18 +26,16 @@ def single_player_mode():
             if sum(Score) > 0:
                 print(f"Congratulations! You scored {sum(Score)} points!!!")
                 enter_high_score()
-                # print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
             else:
-                # print(f"Congratulations! You scored {sum(Score)} points!!!")
                 print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
         elif count <=(len(which_challenge())):
             if index == 0:
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[0])
                 print()
                 player_turn()
@@ -48,14 +46,13 @@ def single_player_mode():
                     return None
                 else: 
                     list_of_inputs.append(players_threw[0])
-                    input((list_of_inputs[0]))
             elif index == 1:
                 system('clear')
                 instructions()
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[1])
                 print()
                 random_player_turn()
@@ -66,14 +63,13 @@ def single_player_mode():
                     return None
                 else:
                     list_of_inputs.append(players_threw[1])
-                    input((list_of_inputs[1]))
             elif index == 2:
                 system('clear')
                 instructions()
                 print()
+                print(f"Round:{count+1}")
                 print (which_challenge()[count])
                 print()
-                print(f"Round:{count+1}")
                 print (number_of_players()[2])
                 print()
                 random_player_turn()
@@ -84,14 +80,12 @@ def single_player_mode():
                     return None
                 else:
                     list_of_inputs.append(players_threw[2])
-                    input((list_of_inputs[2]))
             elif index >= 3:
-                # check if all items in list_of_inputs are the same
-                
                 if([list_of_inputs[0]]*len(list_of_inputs) != list_of_inputs):
                     sum_of_inputs.append(list_of_inputs)
-                    input(sum_of_inputs)
-                    input(list_of_inputs)
+                    print()
+                    print("You didn't reach a consensus. Please try again.") 
+                    input("Press Enter to Continue...")
                     players_threw_clear()
                     single_player_mode()
                 elif([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
@@ -107,17 +101,16 @@ def single_player_mode():
                         print()
                         print("Congratulations! You did it!!!")
                         Score.append(score()[count] + penalty)
-                        input(Score)
                         print(f"You scored {score()[count] + penalty} points")
-                        input(value_of_same)
+                        input("Press Enter to Continue...")
                         value_of_same.clear()
                         players_threw_clear()
                         clear_last(sum_of_inputs)
                         count +=1
                         single_player_mode()
                     else:
-                        print("You failed!!! Try do better on the next challenge.")
-                        input(value_of_same)
+                        print("You've failed the challenge! Keep this up and your group won't survive for long!!!")
+                        input("Press Enter to Continue...")
                         value_of_same.clear()
                         players_threw_clear()
                         clear_last(sum_of_inputs)

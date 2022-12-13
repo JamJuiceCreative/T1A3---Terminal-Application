@@ -29,3 +29,7 @@
 004750	Jimbo
 006100	
 006250	boobby
+000750	fatso
+006100	jimmy
+000750	jimmy
+006100	stinky
