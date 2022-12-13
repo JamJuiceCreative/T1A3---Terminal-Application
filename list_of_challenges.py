@@ -2,9 +2,9 @@
 
 from challenges import challenges
 
-challenge1 = challenges("There's a survivor surrounded by a horde at the downtown mall", 250, False, 1000 )
-challenge2 = challenges("There's an overturned supply truck on highway 99", 250, False, 1000)
-challenge3 = challenges("There's military personnel shooting innocent survivors in the city central hospital", 400, False, 5000)
+challenge1 = challenges("There's a survivor surrounded by a horde at the downtown mall.", 150, False, 1000 )
+challenge2 = challenges("There's an overturned supply truck on highway 99.", 50, False, 1000)
+challenge3 = challenges("There's military personnel shooting innocent survivors in the city central hospital.", 400, False, 5000)
 def which_challenge():
     challenge_list = [challenge1.challenge, challenge2.challenge, challenge3.challenge]
     return (challenge_list)
@@ -16,7 +16,5 @@ def score():
 def value():
     value_list = [challenge1.value, challenge2.value, challenge3.value]
     return (value_list)
-
-
 
 

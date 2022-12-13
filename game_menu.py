@@ -1,5 +1,6 @@
 from os import system
 from open_high_scores import open_high_scores
+from rules import open_rules
 from multi_player import multi_player_mode
 from single_player import single_player_mode
 # game intro - maybe include some ascii art if I have time
@@ -52,7 +53,7 @@ while option != "5":
     elif option == "2":
         multi_player_mode()
     elif option == "3":
-        print("Rules")
+        open_rules()
     elif option == "4":
         open_high_scores()
     elif option == "5":

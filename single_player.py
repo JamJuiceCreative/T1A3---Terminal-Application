@@ -28,6 +28,7 @@ def single_player_mode():
                 enter_high_score()
                 break
             else:
+                print()
                 print("I'm sorry, you failed all of the challenges, better luck next time.")
                 break
         elif count <=(len(which_challenge())):
@@ -94,10 +95,9 @@ def single_player_mode():
                     sum_of_same.append(list_of_inputs[0])   
                     sum_of_same = combine_matching(sum_of_same)
                     penalty = get_penalty(sum_of_same)
-                    print(penalty)
                     print()
                     input("You've reached a consensus! Press Enter to see if you succeeded in the challenge...")
-                    if(card_values[value_of_same[0]] >= value()[0]):
+                    if(card_values[value_of_same[0]] >= value()[count]):
                         print()
                         print("Congratulations! You did it!!!")
                         Score.append(score()[count] + penalty)
@@ -109,6 +109,7 @@ def single_player_mode():
                         count +=1
                         single_player_mode()
                     else:
+                        print()
                         print("You've failed the challenge! Keep this up and your group won't survive for long!!!")
                         input("Press Enter to Continue...")
                         value_of_same.clear()

@@ -3,33 +3,4 @@
 000100	Rob Kirk
 000200	G. A. R.
 000250	R Grimes
-007000	Jimbo
-005000	Jimbo
-007000	Bob Saggat
-005000	Stinky
-001000	MR MAgoo
-001000	Jimbo
-007000	Damn fool
-007000	muppet
-002000	stink fuck
-006000	dumbass
-001000	Butt hurt
-005000	Wtf mate
-007000	
-005000	Jimbo Baggins
-005000	
-005000	bobby
-005000	5
-007000	Jim
-007000	
-006250	
-006250	
-005800	
-004750	
-004750	Jimbo
-006100	
-006250	boobby
-000750	fatso
-006100	jimmy
-000750	jimmy
-006100	stinky
+000950	Stink Face

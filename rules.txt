@@ -1,0 +1,36 @@
+-----------------RULES----------------
+---ZOMBIE APOCALYPSE PLANNING POKER---
+
+ZAPP is a consensus card game based off of
+planning poker or scrum poker only it's the 
+end of the world and a zombie apocalypse!
+
+1. From a range of cards; 
+'Ace', '2', '3', '5', '8', 'King'.
+You and your fellow survivors must determine the
+difficulty of a challenge by each throwing a card.
+
+2. Ace being the challenge is easy and 8 being the 
+task is hard. Throwing a 'King'; the challenge is 
+impossible and you will skip the round and move on 
+to the next.
+
+3. If you all throw different cards, you will each 
+throw again until you have reached a consensus and 
+have all thrown the same card.
+
+4. The game will then evaluate your groups decisions
+against the difficulty rating of the challenge and
+determine whether you succeeded or failed. 
+
+5. Success will award points based on the difficulty 
+of the challenge however your overall score will be
+penalised incrementally based on the value of the
+cards you all agreed upon. 
+
+In other words, the lower the card, the less valuable
+resources like guns, ammo, food and people you'll need
+to expend. But you'll still need to pass the challenge
+or you're coming home empty handed.  
+
+Have fun survivor and good luck!!!

@@ -95,7 +95,7 @@ def multi_player_mode():
                     penalty = get_penalty(sum_of_same)
                     print()
                     input("You've reached a consensus! Press Enter to see if you succeeded in the challenge...")
-                    if(card_values[value_of_same[0]] >= value()[0]):
+                    if(card_values[value_of_same[0]] >= value()[count]):
                         print()
                         print("Congratulations! You did it!!!")
                         Score.append(score()[count] + penalty)
