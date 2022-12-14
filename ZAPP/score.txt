@@ -3,25 +3,4 @@
 000100	Rob Kirk
 000200	G. A. R.
 000250	R Grimes
-000950	bob the builder
-005350	
-000900	
-005500	stinky
-000750	
-000900	
-005800	poop
-001500	5
-005950	Jimmy Boy
-000850	buttholes
-000600	bungholio
-001500	stink fist
-005800	bunghole
-001500	Jim
-001500	stink bugger
-004600	Stinky Boy Buts
-005800	stink face
-005800	stinbug
-001500	Jimbo Jones
-001500	Jimbo Jones
-001500	bunghole man
-000950	8
+000600	
