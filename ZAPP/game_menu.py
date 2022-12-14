@@ -16,7 +16,7 @@ res = attr('reset')
        
 def game_intro():
     print(fore.GREEN_YELLOW + style.BOLD + "GRAaWHHH, Welcome to the Zombie Apocalypse!" + res)
-    print(green + style.BOLD +"            _____                   ""\n""          _( O o )_                 ""\n""         //\  0  /\\\\                ""\n""        //  |   |  \\\\               ""\n""       (\")   | |   (\")              ""\n""             | |                    ""\n""            /   \\                   ""\n""          __|    |__                "+ res)
+    print(green + style.BOLD +"            _____                   ""\n""          _( O o )_                 ""\n""         //\\  0  /\\\\                ""\n""        //  |   |  \\\\              ""\n""       (\")   | |   (\")              ""\n""             | |                    ""\n""            /   \\                   ""\n""          __|    |__                "+ res)
     print()
     opt = input(fore.GREEN_YELLOW + style.BOLD +"Press Enter to continue...")
     return opt

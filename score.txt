@@ -1,6 +1,0 @@
-000050	S.M.Gimp
-000075	T.Moore
-000100	Rob Kirk
-000200	G. A. R.
-000250	R Grimes
-000950	Stink Face

@@ -52,6 +52,6 @@ def append_remaining_card_values(x):
     remaining_cards_values.append(duplicate_card_sorter())
     return x
 
-append_remaining_card_values(remaining_cards_values)
+# append_remaining_card_values(remaining_cards_values)
 
-print(remaining_cards_values)
+# print(remaining_cards_values)

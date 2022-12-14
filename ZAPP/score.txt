@@ -10,3 +10,6 @@
 001500	5
 000900	Jim
 005350	Jimmy
+005950	Jimbo Jones
+000950	dumbass
+006400	top score
