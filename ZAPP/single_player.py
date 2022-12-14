@@ -98,7 +98,7 @@ def single_player_mode():
                     sum_of_same = combine_matching(sum_of_same)
                     penalty = get_penalty(sum_of_same)
                     print()
-                    input(fore.GREEN_YELLOW + style.BOLD + "You've reached a consensus! Press Enter to see if you succeeded in the challenge..."+ green)
+                    input(fore.YELLOW_1 + style.BOLD + "You've reached a consensus! " + fore.GREEN_YELLOW + style.BOLD + "Press Enter to see if you succeeded in the challenge..."+ green)
                     if(card_values[value_of_same[0]] >= value()[count]):
                         print()
                         print(fore.GREEN_YELLOW + style.BOLD + "Congratulations! You did it!!!")
