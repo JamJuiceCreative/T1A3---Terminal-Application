@@ -31,7 +31,6 @@ def random_player_turn():
             input((fore.GREEN_YELLOW + style.BOLD + f"{number_of_players()[count]} threw {player_threw[0].capitalize()}. Press Enter to Confirm..."+ green))  
             break
         else:
-            print(single_player) 
             input(fore.RED + style.BOLD +"Not a valid selection. " + fore.GREEN_YELLOW + style.BOLD + "Press Enter to Continue...")
     players_threw.append(player_threw[0])
 

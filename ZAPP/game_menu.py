@@ -4,6 +4,7 @@ from open_high_scores import open_high_scores
 from rules import open_rules
 from multi_player import multi_player_mode
 from single_player import single_player_mode
+from art import *
 # game intro - maybe include some ascii art if I have time
               
 
@@ -23,12 +24,8 @@ def game_intro():
 # prints the game menu with options for play vs the computer/ play vs friends / high score / Quit Game
 
 def menu_options():
-    print(green_yellow +" ______        __        ____      ____") 
-    print("|____  /      /  \      |  _  \   |  _  \\")
-    print("    / /      / /\ \     | |_| |   | |_| |")
-    print("  / /__     / ____ \    |  ___/   |  ___/")
-    print("/______|   /_/    \_\   |_|       |_|")
-    print("")
+    Art=text2art("Z   A   P   P") # Return ASCII text (default font) and default chr_ignore=True 
+    print(Art)
     print("This is ZAPP - Zombie Apocalypse Planning Poker")
     print("")
     print(green +"1. Play with the computer")

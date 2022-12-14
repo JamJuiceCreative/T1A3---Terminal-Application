@@ -56,7 +56,7 @@ def single_player_mode():
                 print(f"Round:{count+1}")
                 print (fore.GREEN_YELLOW + style.BOLD + which_challenge()[count] + green)
                 print()
-                print (number_of_players()[1])
+                print(number_of_players()[1])
                 print()
                 random_player_turn()
                 if "king" in players_threw:

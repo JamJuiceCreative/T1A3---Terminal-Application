@@ -4,6 +4,7 @@ from bridge import sum_of_inputs, remaining_cards_values
 
 
 
+
 def check_for_duplicates():
     thrown_cards = sum_of_inputs[-1]
     def remove_duplicates(x):
@@ -69,6 +70,3 @@ def run_next():
             
         else:
             return card_sorter()
-
-
-
