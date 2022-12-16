@@ -1,13 +1,13 @@
 from os import system
 from colored import fg, attr, fore, style
+from art import *
 from open_high_scores import open_high_scores
 from rules import open_rules
 from multi_player import multi_player_mode
 from single_player import single_player_mode
-from art import *
-# game intro - maybe include some ascii art if I have time
-              
+from try_except import try_except
 
+# game intro - maybe include some ascii art if I have time
 
 green = fg('#32CD32')
 green_yellow = fg ('#ADFF2F')
@@ -32,9 +32,10 @@ def menu_options():
     print("2. Play with friends")
     print("3. Rules")
     print("4. High Scores")
-    print("5. Quit Game")
+    print("5. Bonus Content")
+    print("6. Quit Game")
     print()
-    opt = input(fore.GREEN_YELLOW + style.BOLD + "Select your option (1-5): ")
+    opt = input(fore.GREEN_YELLOW + style.BOLD + "Select your option (1-6): ")
     return opt
 
 intro = ""
@@ -47,10 +48,9 @@ while intro != "q":
     else:
         exit
 
-
 option = ""
 
-while option != "5":
+while option != "6":
     system('clear')
     option = menu_options()
     system('clear')
@@ -63,6 +63,8 @@ while option != "5":
     elif option == "4":
         open_high_scores()
     elif option == "5":
+        try_except()
+    elif option == "6":
         continue
     else:
         print(green + "It's not a tumor!")
