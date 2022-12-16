@@ -1,16 +1,26 @@
 Instructions for running zapp.sh;
 
-1. In ubuntu (linux) terminal check if python is installed:
+1. running zapp.sh inside the "ZAPP" directory folder should execute the program as it;
+- checks if python3 is installed
+- Installs python3 if it's not found
+- checks if the required packages are installed
+- installs required packages if needed
+
+./zapp.sh
+
+* if simply typing ./zapp.sh into the terminal doesn't execute the program please follow the steps below.
+
+2. In ubuntu (linux) terminal check if python is installed:
 
 python -V
     Python 3.12.0a2
 
-2. If python is not installed or it's an outdated version;
+3. If python is not installed or it's an outdated version;
     Download the latest version of python:
 
 sudo apt install python3
 
-3. Make sure the following packages are installed in your system;
+4. Make sure the following packages are installed in your system;
 
     art==5.8
     colored==1.4.4
@@ -25,12 +35,15 @@ sudo apt install python3
     pytest==7.2.0
 
 
-4. If any are missing; (for example - colored)
+5. If any are missing; (for example - colored)
 
 pip install colored
 
-* or 
+* or just activate the virtual environment
+from inside "ZAPP" directory folder;
 
-5. finally run executable file zapp.sh;
+source venv/bin/activate
+
+6. finally run executable file zapp.sh;
 
 ./zapp.sh

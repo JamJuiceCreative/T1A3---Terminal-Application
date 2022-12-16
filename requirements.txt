@@ -1,7 +1,8 @@
 art==5.8
-attrs==22.1.0
 colored==1.4.4
 iniconfig==1.1.1
 packaging==22.0
 pluggy==1.0.0
 pytest==7.2.0
+
+
