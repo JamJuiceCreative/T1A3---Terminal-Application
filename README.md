@@ -92,7 +92,7 @@ from inside "ZAPP" directory folder;
 
 # <p style="text-align:center">Project Overview;</p>
 
-I wanted to create a terminal app that would feature a game that would be familiar to those in the programming world. That way I would have the frame work for a program that will actually be useful in a programming or development environment. I chose "planning poker" or "scrum poker" as it fulfilled this requirement however to make it more interesting I based it around the zombie apocalypse.
+I wanted to create a terminal app that would feature a game that would be familiar to those in the programming world. That way I would have the frame work for a program that would potentially be useful in a programming or development environment. I chose "planning poker" or "scrum poker" as it fulfilled this requirement however to make it more interesting I based it around the zombie apocalypse.
 
 ## List of program features;
 * Game Intro
@@ -162,7 +162,7 @@ I created all of the elements utilising a TDD approach essentially creating all 
 * Incorporate some Error Handling within.
 ### Feature 5. Bonus Content;
 I designed my program to basically account for any user input either being accepted or returning invalid selection statements, so it's impossible for the user to throw an error and break the program. I added a bonus feature to demonstrate my understanding of Error Handling using the try/except statements.
-* Design a function that deliberatly throws a ValueError. User input asks for name but actually requires an intiger. 
+* Design a function that deliberately throws a ValueError. User input asks for name, but in-fact requires an integer. 
 * Instead of breaking the program except statement executes a read file function that displays a secret message from a text file. So it incorporates a little bit more file handling as well so it's 2 birds with one stone.
 ### Feature 6. Game Menu;
 * Determine the games features.

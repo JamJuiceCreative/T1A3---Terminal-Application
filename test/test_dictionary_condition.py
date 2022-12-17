@@ -1,5 +1,3 @@
-
-
 def test_card_values():
     card_values={
         "Ace": 50,

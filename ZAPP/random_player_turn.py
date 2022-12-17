@@ -8,12 +8,9 @@ res = attr('reset')
 
 
 count = 0
-
 def random_player_turn():
     global count
     count+=1
-
-
     single_player = ""
     if count >= len(number_of_players()):
         count = 1

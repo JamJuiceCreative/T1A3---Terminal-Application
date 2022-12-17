@@ -14,7 +14,7 @@ def test_functions():
 list = []
 
 def test_say_hello():
-    return("hello")
+    assert("hello")
 
 list.append(test_say_hello())
 

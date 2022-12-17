@@ -1,18 +1,18 @@
 
 def test_survivors():
 
-
     survivor1 = ["King"]
     survivor2 = [2]
     survivor3 = [2]
 
     assert survivor2 == survivor3
 
+list_of_inputs = ["8", "9", "8"]
+
 def test_while_loop():
-    survivor1 = [2]
-    survivor2 = [2]
-    survivor3 = [2]
-    while survivor1 != survivor2 and survivor3:
+
+    while ([list_of_inputs[0]]*len(list_of_inputs) == list_of_inputs):
         print ("this is a test")
-print ("those bad boys match")
+    print ("those bad boys don't match")
+
 test_while_loop()

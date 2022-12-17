@@ -8,7 +8,7 @@ def test_random():
 
     assert test_add_numbers(2,2) == 4
 
-test_random()
+
 
 
 

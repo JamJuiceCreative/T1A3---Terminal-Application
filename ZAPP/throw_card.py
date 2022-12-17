@@ -1,5 +1,4 @@
 import random
-
 from bridge import sum_of_inputs
 from number_sorter import run_next, remaining_cards_values
 

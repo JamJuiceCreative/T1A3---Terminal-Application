@@ -22,13 +22,3 @@ fi
 
 python3 game_menu.py
 
-
-
-
-
-
-
-
-
-python3 game_menu.py
-

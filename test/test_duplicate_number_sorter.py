@@ -30,10 +30,8 @@ def duplicate_card_sorter():
 
     card_index2 = {i:j for i,j in card_index.items() if i not in card_index2}
     print("This puts the thrown cards in order:",card_index2)
-
     sorted_cards = sorted(card_index2.items(), key=lambda x:x[1])
     print("This converts it to a list of tuples:", sorted_cards)
-
     sorted_cards_slice = sorted_cards[1:-1]
     print("This removes the outside numbers",sorted_cards_slice)
 
@@ -64,4 +62,4 @@ def duplicate_card_sorter():
     print("This give the list of remaining cards, inclusive of the outside cards:",remaining_cards)
 
 
-duplicate_card_sorter()
+

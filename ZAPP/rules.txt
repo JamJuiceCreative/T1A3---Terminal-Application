@@ -19,7 +19,7 @@ to the next.
 throw again until you have reached a consensus and 
 have all thrown the same card.
 
-4. The game will then evaluate your groups decisions
+4. The game will then evaluate your group's decisions
 against the difficulty rating of the challenge and
 determine whether you succeeded or failed. 
 

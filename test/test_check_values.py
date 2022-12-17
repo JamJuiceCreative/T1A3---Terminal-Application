@@ -24,7 +24,6 @@ print(card_values["5"])
 print(value()[0])
 
 def test_check_values():
-
     assert (card_values["5"]) == (value()[0])
 
 

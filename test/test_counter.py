@@ -1,5 +1,5 @@
 count=0
-def test_any_function():
+def test_global_count():
     global count
     count+=1
 test_any_function()
