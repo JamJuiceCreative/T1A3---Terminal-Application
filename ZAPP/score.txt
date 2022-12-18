@@ -3,6 +3,4 @@
 000100	Rob Kirk
 000200	G. A. R.
 000250	R Grimes
-000950	Jimbo Jones
-000750	Mr MAgoo
-001500	Billy Bob Brown
+000600	S.M.Gimp
