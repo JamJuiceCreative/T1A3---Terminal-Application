@@ -1,48 +1,19 @@
 # <p style="text-align:center"> ZAPP - Zombie Apocalypse Planning Poker</p>
+## Video Presentation - https://www.youtube.com/watch?v=WAXMrl4ehB4
+## Application Demonstration - https://www.youtube.com/watch?v=COlVYZz_xPA
 
+## Source Control Repository - https://github.com/JamJuiceCreative/T1A3---Terminal-Application
 
-## <p style="text-align:center">-----------------RULES----------------</p>
-<p style="text-align:center">---ZOMBIE APOCALYPSE PLANNING POKER---</p>
+## Project Management Platform - https://trello.com/b/1Fb6TSx0/
 
-ZAPP is a consensus card game based off of
-planning poker or scrum poker only it's the 
-end of the world and a zombie apocalypse!
+___
 
-1. From a range of cards; 
-'Ace', '2', '3', '5', '8', 'King'.
-You and your fellow survivors must determine the
-difficulty of a challenge by each throwing a card.
-
-2. Ace being the challenge is easy and 8 being the 
-task is hard. Throwing a 'King'; the challenge is 
-impossible and you will skip the round and move on 
-to the next.
-
-3. If you all throw different cards, you will each 
-throw again until you have reached a consensus and 
-have all thrown the same card.
-
-4. The game will then evaluate your groups decisions
-against the difficulty rating of the challenge and
-determine whether you succeeded or failed. 
-
-5. Success will award points based on the difficulty 
-of the challenge however your overall score will be
-penalised incrementally based on the value of the
-cards you all agreed upon. 
-
-In other words, the lower the card, the less valuable
-resources like guns, ammo, food and people you'll need
-to expend. But you'll still need to pass the challenge
-or you're coming home empty handed.  
-
-Have fun survivor and good luck!!!
 
 ## <p style="text-align:center">Help for executing program;</p>
 ___
 Instructions for running zapp.sh;
 
-1. running zapp.sh inside the "ZAPP" directory folder should execute the program as it;
+1. running zapp.sh inside the "src" directory folder should execute the program as it;
 - checks if python3 is installed
 - Installs python3 if it's not found
 - checks if the required packages are installed
@@ -89,6 +60,43 @@ from inside "ZAPP" directory folder;
 6. finally run executable file zapp.sh;
 
         ./zapp.sh
+
+## <p style="text-align:center">-----------------RULES----------------</p>
+<p style="text-align:center">---ZOMBIE APOCALYPSE PLANNING POKER---</p>
+
+ZAPP is a consensus card game based off of
+planning poker or scrum poker only it's the 
+end of the world and a zombie apocalypse!
+
+1. From a range of cards; 
+'Ace', '2', '3', '5', '8', 'King'.
+You and your fellow survivors must determine the
+difficulty of a challenge by each throwing a card.
+
+2. Ace being the challenge is easy and 8 being the 
+task is hard. Throwing a 'King'; the challenge is 
+impossible and you will skip the round and move on 
+to the next.
+
+3. If you all throw different cards, you will each 
+throw again until you have reached a consensus and 
+have all thrown the same card.
+
+4. The game will then evaluate your groups decisions
+against the difficulty rating of the challenge and
+determine whether you succeeded or failed. 
+
+5. Success will award points based on the difficulty 
+of the challenge however your overall score will be
+penalised incrementally based on the value of the
+cards you all agreed upon. 
+
+In other words, the lower the card, the less valuable
+resources like guns, ammo, food and people you'll need
+to expend. But you'll still need to pass the challenge
+or you're coming home empty handed.  
+
+Have fun survivor and good luck!!!
 
 # <p style="text-align:center">Project Overview;</p>
 
@@ -181,6 +189,91 @@ https://github.com/JamJuiceCreative/T1A3---Terminal-Application<br>
 Code Styling Conventions: Pep 8<br>
 https://peps.python.org/pep-0008/
 
+## Testing; 
+
+So, as I have mentioned I tried to adopt a test-driven development approach to the entire project. Essentially, I developed all my code in test environments which not only helped to break down problems into smaller challenges but turned out to be a really good way to learn all of the python fundamentals through trial and error. So, I suppose you could break down my methodology into 3 types of testing. I utilised assertion testing with pytest. I performed quite a bit of manual testing. Also, some testing using print statements which I found super useful in some of the more challenging parts of the project.
+
+### Assertion Tests;
+
+```python
+def test_round_checker():
+    sum_of_inputs = [["King", "Ace", "2"],["King", "Ace", "2"],["King","Ace", "2"]]
+    assert (len(sum_of_inputs))==(len(number_of_players()))
+    print(len(sum_of_inputs))
+    print(round)
+```
+```python
+def test_card_values():   
+  card_values={
+        "Ace": 50,
+        2: 100,
+        3: 250,
+        5: 500,
+        8: 750,
+        "king": 1000
+    } 
+  assert("Ace" not in card_values.items())
+  assert(2 in card_values)
+```
+```python
+numbers = [1,2,3,4,5,6,7,8,9,10]
+def test_add_high_score():
+  assert sum(numbers) == 55
+```
+```python
+from utils.challenges import challenges
+from utils.card_values import card_values
+challenge1 = challenges("There's a survivor surrounded by a horde at the downtown mall", 250, False, 1000 )
+challenge2 = challenges("There's an overturned supply truck on highway 99", 250, False, 1000)
+challenge3 = challenges("There's military personnel shooting innocent survivors in the city central hospital", 400, False, 5000)
+def which_challenge():
+    challenge_list = [challenge1.challenge, challenge2.challenge, challenge3.challenge]
+    return (challenge_list)
+def score():
+    score_list = [challenge1.score, challenge2.score, challenge3.score]
+    return (score_list)
+def value():
+    value_list = [challenge1.value, challenge2.value, challenge3.value]
+    return (value_list)
+print(len(which_challenge()))
+print(which_challenge())
+print(score())
+print(card_values["5"])
+print(value()[0])
+def test_check_values():
+    assert (card_values["5"]) == (value()[0])
+```
+Manual Tests Spread Sheet;
+![Manual Tests](./docs/manual-testing-spreadsheet.jpg)
+
+Testing using print statements;
+```python
+    card_index2 = {i:j for i,j in card_index.items() if i not in card_index2}
+    print("This puts the thrown cards in order:",card_index2)
+    sorted_cards = sorted(card_index2.items(), key=lambda x:x[1])
+    print("This converts it to a list of tuples:", sorted_cards)
+    sorted_cards_slice = sorted_cards[1:-1]
+    print("This removes the outside numbers",sorted_cards_slice)
+    resultDictionary = dict((x, y) for x, y in sorted_cards_slice)
+    print("This converts it back to a dictionary:", resultDictionary)
+    card_range = {i:j for i,j in card_index2.items() if i not in resultDictionary}
+    print("This gives the outside cards: ", card_range)
+    card_tuple = sorted(card_index.items(), key=lambda x:x[1])
+    print("This converts the original card index to a list of tuples",card_tuple)
+    index_list = list(card_index)
+    print("This converts card_index to a list:",index_list)
+    outside_list = list(card_range)
+    print("This prints the outside numbers by index:",outside_list[0], outside_list[1])
+    card_range1= index_list.index(outside_list[0])
+    print("This prints the index of the first outside value:",card_range1)
+    card_range2= index_list.index(outside_list[1])
+    print("This prints the index of the second outside value:",card_range2)
+    remaining_cards = card_tuple[card_range1:card_range2+1]
+    print("This give the list of remaining cards, inclusive of the outside cards:",remaining_cards)
+    remaining_cards_dict = dict((x,y) for x, y in remaining_cards)
+    remaining_cards_list = list(remaining_cards_dict)
+    return(remaining_cards_list)
+```
 ## <p style = "text-align:center"> References </p> 
 Rules for Planning Poker - https://en.wikipedia.org/wiki/Planning_poker<br>
 ### External Packages; <br>

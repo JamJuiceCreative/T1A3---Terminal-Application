@@ -1,6 +1,6 @@
 Instructions for running zapp.sh;
 
-1. running zapp.sh inside the "ZAPP" directory folder should execute the program as it;
+1. running zapp.sh inside the "src" directory folder should execute the program as it;
 - checks if python3 is installed
 - Installs python3 if it's not found
 - checks if the required packages are installed
