@@ -1,17 +1,17 @@
 # <p style="text-align:center"> ZAPP - Zombie Apocalypse Planning Poker</p>
-## Video Presentation - https://www.youtube.com/watch?v=WAXMrl4ehB4
-## Application Demonstration - https://www.youtube.com/watch?v=COlVYZz_xPA
+### Video Presentation - https://www.youtube.com/watch?v=WAXMrl4ehB4
+### Application Demonstration - https://www.youtube.com/watch?v=COlVYZz_xPA
 
-## Source Control Repository - https://github.com/JamJuiceCreative/T1A3---Terminal-Application
+### Source Control Repository - https://github.com/JamJuiceCreative/T1A3---Terminal-Application
 
-## Project Management Platform - https://trello.com/b/1Fb6TSx0/
+### Project Management Platform - https://trello.com/b/1Fb6TSx0/
 
 ___
 
 
 ## <p style="text-align:center">Help for executing program;</p>
 ___
-Instructions for running zapp.sh;
+### Instructions for running zapp.sh;
 
 1. running zapp.sh inside the "src" directory folder should execute the program as it;
 - checks if python3 is installed
